@@ -37,7 +37,10 @@ func GenerateListOfAllArticles() ([]Article, error) {
 	// Loop through the filenames to load each article.
 	for _, filename := range filenames {
 		// Load the content of each article by its filename (assuming LoadPage function handles it).
-		article, _ := LoadPage(filename)
+		article, err := LoadPage(filename)
+		if err != nil {
+			return nil, err
+		}
 
 		// Append the loaded article to the articles slice.
 		articles = append(articles, *article)
