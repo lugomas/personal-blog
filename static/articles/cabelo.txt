@@ -1,7 +1,0 @@
-{
-  "id": "2024111611101109",
-  "title": "cabelo",
-  "Content": "bWV1IGNhYmVsbyBwYXJlY2UgdW0gY2FwYWNldGUsIG1hcyB2b3UgY29ydGFyIGhvamUNCg==",
-  "created_at": "2024-11-16 11:10:09",
-  "updated_at": "2024-11-16 11:19:22"
-}
