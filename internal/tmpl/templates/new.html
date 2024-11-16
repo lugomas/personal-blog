@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Create New Article</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        .form-actions {
+            text-align: right;
+        }
+        .form-actions button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: #fff;
+        }
+        .form-actions button.cancel {
+            background-color: #ff4d4d;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Create New Article</h1>
+
+<div class="form-container">
+    <form action="/save/{{.Title}}" method="post">
+        <div class="form-group">
+            <label for="title">Article Title</label>
+            <input type="text" id="title" name="title" placeholder="Enter the article title" required>
+        </div>
+        <div class="form-group">
+            <label for="body">Article Body</label>
+            <textarea id="body" name="body" placeholder="Write the article content here" required></textarea>
+        </div>
+        <div class="form-actions">
+            <button type="button" class="cancel" onclick="window.location.href='/';">Cancel</button>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

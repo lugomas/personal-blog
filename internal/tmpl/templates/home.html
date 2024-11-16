@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Personal Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .article-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .article {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .article h2 {
+            margin-top: 0;
+        }
+        .article .date {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .article h2 a {
+            text-decoration: none;
+            color: #333;
+        }
+        .article h2 a:hover {
+            text-decoration: underline;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Personal Blog</h1>
+<button onclick="window.location.href='/logout';">Logout</button>
+
+<div class="article-list">
+    {{range .}}
+    <div class="article">
+        <h2>
+            <a href="/view/{{.Title}}">{{.Title}}</a>
+        </h2>
+        <p class="date">Created At: {{.CreatedAt}}</p>
+    </div>
+    {{else}}
+    <p>No articles found.</p>
+    {{end}}
+</div>
+
+</body>
+</html>
