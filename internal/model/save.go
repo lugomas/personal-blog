@@ -28,5 +28,5 @@ func (p *Article) Save() error {
 
 	// Write the serialized JSON data to a file in the "static/articles/" directory.
 	// Set the file permissions to `0600`, which means read and write permissions for the owner only.
-	return os.WriteFile("static/articles/"+fileName, newData, 0600)
+	return os.WriteFile(articlesPath+fileName, newData, 0600)
 }

@@ -13,7 +13,7 @@ func LoadPage(title string) (*Article, error) {
 	fileName := title + ".txt"
 
 	// Read the content of the article file.
-	body, err := os.ReadFile("static/articles/" + fileName)
+	body, err := os.ReadFile(articlesPath + fileName)
 	if err != nil {
 		// Return an error if the file cannot be read (e.g., if the file does not exist).
 		return nil, err

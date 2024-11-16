@@ -9,3 +9,5 @@ type Article struct {
 	CreatedAt string `json:"created_at"` // Timestamp when the article was created.
 	UpdatedAt string `json:"updated_at"` // Timestamp when the article was last updated.
 }
+
+var articlesPath = "static/articles/"

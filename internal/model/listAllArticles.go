@@ -10,7 +10,7 @@ import (
 // It reads all files in the directory, filters out non-`.txt` files, and loads each article.
 func GenerateListOfAllArticles() ([]Article, error) {
 	// Define the directory where articles are stored.
-	dir := "static/articles/"
+	dir := articlesPath
 
 	// Read the content of the specified directory.
 	files, err := os.ReadDir(dir)
